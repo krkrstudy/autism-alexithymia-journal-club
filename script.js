@@ -65,6 +65,7 @@ document.querySelectorAll('.evidence-filter button').forEach(button=>{
     button.classList.add('active');
     const filter=button.dataset.filter;
     document.querySelectorAll('.evidence-card').forEach(card=>card.classList.toggle('hidden',filter!=='all'&&card.dataset.type!==filter));
+    document.querySelectorAll('.evidence-transition').forEach(item=>item.classList.toggle('hidden',filter!=='all'));
   });
 });
 
@@ -72,26 +73,20 @@ const causalRoles={
   confounder:{
     title:'如果述情障碍是混杂因素',
     graph:'<div class="graph-flow"><div class="nodes"><b>孤独症组别</b><i>← 相关 →</i><b class="alex">述情障碍</b></div><div class="nodes"><b class="alex">述情障碍</b><i>→</i><b>情绪加工结果</b></div><small>述情障碍既与分组相关，又独立关联结果</small></div>',
-    text:'此时不控制述情障碍，可能把它对结果的贡献错误归给孤独症组别。控制有助于估计“在述情障碍水平相同的情况下”组别与结果的关联。',
-    advice:'但前提是有理论和时间证据支持它是组别—结果关系之外的混杂来源。'
+    text:'述情障碍同时与孤独症组别和情绪加工结果相关。将其纳入模型，可以估计述情障碍水平相同时的组别关联。',
+    advice:'这种处理需要理论和时间证据支持述情障碍的混杂角色。'
   },
   mediator:{
     title:'如果述情障碍是发展中介',
     graph:'<div class="graph-flow"><div class="nodes"><b>孤独症相关发展差异</b><i>→</i><b class="alex">述情障碍</b><i>→</i><b>情绪加工结果</b></div><small>述情障碍位于一条真实机制路径上</small></div>',
-    text:'此时控制述情障碍会删掉孤独症相关发展差异通过述情障碍传递的间接效应。如果目标是估计总效应，这属于过度控制；如果目标是估计不经过述情障碍的直接效应，则可以控制。',
-    advice:'“控制后差异消失”可能意味着路径被解释，而不是孤独症与结果毫无关系。'
+    text:'述情障碍位于发展路径中时，将其纳入模型会移除这条间接效应。估计总效应应保留该路径；估计直接效应时可以控制。',
+    advice:'控制后组别差异缩小，可能表示述情障碍承载了部分发展路径。'
   },
   overlap:{
     title:'如果两种量表存在测量重叠',
     graph:'<div class="graph-flow"><div class="nodes"><b>孤独症自评</b><i>←</i><b>一般痛苦 / 回答风格</b><i>→</i><b class="alex">述情障碍自评</b></div><div class="nodes"><b class="alex">述情障碍自评</b><i>↔</i><b>焦虑自评</b></div><small>相关部分来自相似题意或共同方法</small></div>',
-    text:'同一时间、同一报告者、相似措辞的问卷可能共享一般心理痛苦或回答风格。把其中一份量表作为协变量，可能只是把共同测量成分移除，而不是识别真实心理机制。',
-    advice:'需要多方法、他评、行为或生理指标来判断相关究竟来自构念还是测量。'
-  },
-  collider:{
-    title:'如果述情障碍或样本选择是碰撞变量',
-    graph:'<div class="graph-flow"><div class="nodes"><b>孤独症相关因素</b><i>→</i><b class="alex">被纳入 / 高述情障碍</b><i>←</i><b>心理健康因素</b></div><small>两个原因共同影响被控制的变量</small></div>',
-    text:'当两个彼此独立的原因共同影响一个变量时，对这个变量进行控制或只分析某个临床样本，可能人为打开一条统计关联，产生原本不存在的关系。',
-    advice:'临床求助样本尤其需要考虑选择偏差；“控制更多变量”并不总是更接近真相。'
+    text:'同一时间、同一报告者和相似措辞会带来一般心理痛苦或回答风格的共享成分。控制其中一份量表会同时移除这些共享测量成分。',
+    advice:'多方法、他评、行为和生理指标可以帮助区分构念关联与测量重叠。'
   }
 };
 
