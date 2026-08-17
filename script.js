@@ -3,12 +3,11 @@ const desktopToc=document.getElementById('desktopToc');
 const mobileToc=document.getElementById('mobileToc');
 const progress=document.getElementById('readingProgress');
 const mobileMenu=document.getElementById('mobileMenu');
-const glossary=document.getElementById('glossary');
 const scrim=document.getElementById('scrim');
 const backTop=document.getElementById('backTop');
 
 sections.forEach((section,index)=>{
-  const label=`${String(index).padStart(2,'0')} · ${section.dataset.title}`;
+  const label=`${String(index+1).padStart(2,'0')} · ${section.dataset.title}`;
   [desktopToc,mobileToc].forEach(nav=>{
     const link=document.createElement('a');
     link.href=`#${section.id}`;
@@ -21,9 +20,7 @@ sections.forEach((section,index)=>{
 
 function closePanels(){
   mobileMenu.classList.remove('open');
-  glossary.classList.remove('open');
   mobileMenu.setAttribute('aria-hidden','true');
-  glossary.setAttribute('aria-hidden','true');
   document.getElementById('menuButton').setAttribute('aria-expanded','false');
   scrim.hidden=true;
 }
@@ -40,24 +37,8 @@ document.getElementById('menuButton').addEventListener('click',()=>{
   document.getElementById('menuButton').setAttribute('aria-expanded','true');
 });
 document.getElementById('menuClose').addEventListener('click',closePanels);
-document.getElementById('glossaryButton').addEventListener('click',()=>openPanel(glossary));
-document.getElementById('glossaryClose').addEventListener('click',closePanels);
 scrim.addEventListener('click',closePanels);
 document.addEventListener('keydown',event=>{if(event.key==='Escape')closePanels()});
-
-document.getElementById('fontButton').addEventListener('click',event=>{
-  const active=document.body.classList.toggle('large-type');
-  event.currentTarget.setAttribute('aria-pressed',String(active));
-  event.currentTarget.textContent=active?'标准字':'大字';
-});
-
-document.querySelectorAll('dfn[data-term]').forEach(term=>{
-  term.setAttribute('tabindex','0');
-  term.setAttribute('role','button');
-  term.setAttribute('aria-label',`${term.textContent}，点击查看术语解释`);
-  term.addEventListener('click',()=>openPanel(glossary));
-  term.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();openPanel(glossary)}});
-});
 
 document.querySelectorAll('.evidence-filter button').forEach(button=>{
   button.addEventListener('click',()=>{
@@ -73,20 +54,20 @@ const causalRoles={
   confounder:{
     title:'如果述情障碍是混杂因素',
     graph:'<div class="graph-flow"><div class="nodes"><b>孤独症组别</b><i>← 相关 →</i><b class="alex">述情障碍</b></div><div class="nodes"><b class="alex">述情障碍</b><i>→</i><b>情绪加工结果</b></div><small>述情障碍既与分组相关，又独立关联结果</small></div>',
-    text:'述情障碍同时与孤独症组别和情绪加工结果相关。将其纳入模型，可以估计述情障碍水平相同时的组别关联。',
-    advice:'这种处理需要理论和时间证据支持述情障碍的混杂角色。'
+    text:'在混杂模型中，述情障碍与孤独症组别相关，也独立关联情绪加工结果。研究者控制它，是为了比较述情障碍水平相近的人群，估计组别本身还剩下多少关联。这个解释要求混杂变量先于结果出现，而且不能是孤独症影响结果的中间环节。',
+    advice:'只有当时间顺序和理论都支持“共同原因或前置变量”时，控制才有清晰含义；否则，统计调整可能把真正的机制一并移除。'
   },
   mediator:{
     title:'如果述情障碍是发展中介',
     graph:'<div class="graph-flow"><div class="nodes"><b>孤独症相关发展差异</b><i>→</i><b class="alex">述情障碍</b><i>→</i><b>情绪加工结果</b></div><small>述情障碍位于一条真实机制路径上</small></div>',
-    text:'述情障碍位于发展路径中时，将其纳入模型会移除这条间接效应。估计总效应应保留该路径；估计直接效应时可以控制。',
-    advice:'控制后组别差异缩小，可能表示述情障碍承载了部分发展路径。'
+    text:'在中介模型中，孤独症相关的发展差异先影响述情障碍，述情障碍再与后续情绪加工或心理健康结果相连。控制它会移除这条间接路径，因此组别差异缩小可能正是机制的一部分，而不是“差异被消除了”。',
+    advice:'要支持中介解释，需要至少有清楚的时间顺序；横断面间接效应只能提出路径假设，不能证明变量按这个顺序发生。'
   },
   overlap:{
     title:'如果两种量表存在测量重叠',
     graph:'<div class="graph-flow"><div class="nodes"><b>孤独症自评</b><i>←</i><b>一般痛苦 / 回答风格</b><i>→</i><b class="alex">述情障碍自评</b></div><div class="nodes"><b class="alex">述情障碍自评</b><i>↔</i><b>焦虑自评</b></div><small>相关部分来自相似题意或共同方法</small></div>',
-    text:'同一时间、同一报告者和相似措辞会带来一般心理痛苦或回答风格的共享成分。控制其中一份量表会同时移除这些共享测量成分。',
-    advice:'多方法、他评、行为和生理指标可以帮助区分构念关联与测量重叠。'
+    text:'在测量重叠模型中，相关可能来自相似题目、同一报告者或一般心理痛苦，而不一定来自两个稳定构念之间的真实联系。例如，述情障碍和焦虑量表都询问“难以理解或控制自己的感受”，它们自然会共享一部分方差。',
+    advice:'多方法、他评、行为和生理指标可以帮助区分构念关联与测量重叠；分析前也应检查题目内容和共同方法方差。'
   }
 };
 
