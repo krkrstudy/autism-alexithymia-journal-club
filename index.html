@@ -20,15 +20,8 @@
     <a class="wordmark" href="#top" aria-label="返回首页">
       <span>A × A</span><b>孤独症与述情障碍</b>
     </a>
-    <nav class="header-nav" aria-label="主要导航">
-      <a href="#knowledge-map">知识地图</a>
-      <a href="#concept">概念</a>
-      <a href="#evidence">证据</a>
-      <a href="#causality">因果推断</a>
-    </nav>
     <div class="header-actions">
-      <button id="fontButton" type="button" aria-pressed="false">大字</button>
-      <button id="glossaryButton" type="button">术语表</button>
+      <nav class="header-nav" id="desktopToc" aria-label="文章目录"></nav>
       <button id="menuButton" type="button" aria-label="打开目录" aria-expanded="false">☰</button>
     </div>
   </header>
@@ -46,7 +39,7 @@
         <h1>孤独症与<br><em>情绪加工</em></h1>
         <p class="hero-deck">述情障碍、感觉与心理健康的研究线索。</p>
         <div class="hero-meta"><span>9 篇核心文献 · 约 25 分钟</span></div>
-        <a class="start-button" href="#knowledge-map">开始阅读 <span>↓</span></a>
+        <a class="start-button" href="#concept">开始阅读 <span>↓</span></a>
       </div>
       <div class="hero-mark" aria-hidden="true">
         <span class="mark-ring ring-one"></span>
@@ -62,56 +55,17 @@
   </section>
 
   <div class="page-shell">
-    <aside class="desktop-toc" aria-label="文章目录">
-      <p>CONTENTS</p>
-      <nav id="desktopToc"></nav>
-      <div class="toc-note"><b>阅读提示</b><span>正文中的彩色标签区分“研究结果”“作者解释”和“综合推论”。</span></div>
-    </aside>
 
     <main id="main">
-      <section class="article-section knowledge-map-section" id="knowledge-map" data-title="知识地图">
-        <div class="section-kicker">00 · KNOWLEDGE MAP</div>
-        <h2>先看清这篇文章要连接哪些概念</h2>
-        <p class="standfirst">全文围绕一个问题展开：孤独症人群中的情绪加工差异，有多少与共现的述情障碍有关？回答它需要把发展背景、身体信号、情绪觉察、社会情绪加工和心理健康放在同一张图里。</p>
-
-        <div class="knowledge-map" aria-label="从发展背景和感觉信号，经由述情障碍，到情绪加工与心理健康的知识地图">
-          <a class="map-context" href="#concept">
-            <span class="context-number">01</span>
-            <span><small>发展背景</small><b>孤独症相关特征</b></span>
-            <p>感觉、语言、社会学习与认知差异，为整条路径提供背景。</p>
-          </a>
-          <div class="map-pathway">
-            <a class="path-stage stage-sensory" href="#mechanism">
-              <span class="stage-symbol">∿</span><small>信号从哪里来</small><b>感觉 / 内感受</b><p>环境刺激与身体内部状态</p>
-            </a>
-            <div class="path-connector"><span>信号被解释</span><i>→</i></div>
-            <a class="path-stage stage-alex" href="#measurement">
-              <span class="stage-symbol">◌</span><small>核心变量</small><b>述情障碍</b><p>识别 · 描述 · 关注情绪</p>
-            </a>
-            <div class="path-connector"><span>塑造加工方式</span><i>→</i></div>
-            <a class="path-stage stage-emotion" href="#evidence">
-              <span class="stage-symbol">≋</span><small>近端结果</small><b>情绪加工</b><p>识别 · 共情 · 表达 · 调节</p>
-            </a>
-            <div class="path-connector"><span>关联日常结果</span><i>→</i></div>
-            <a class="path-stage stage-health" href="#practice">
-              <span class="stage-symbol">✦</span><small>远端结果</small><b>心理健康</b><p>焦虑 · 抑郁 · 日常适应</p>
-            </a>
-          </div>
-          <div class="map-legend">
-            <span><i class="legend-solid"></i>文献支持的关联</span>
-            <span><i class="legend-dashed"></i>因果方向仍待验证</span>
-            <p><b>共同来源</b>　遗传与发展经验可能同时连接孤独症、述情障碍和感觉特征。</p>
-          </div>
-        </div>
-
-        <div class="map-reading-route">
-          <p><b>1 · 概念与测量</b><span>先界定述情障碍，再确认量表能否在孤独症人群中可靠使用。</span></p>
-          <p><b>2 · 共现与来源</b><span>估计述情障碍有多常见，并比较发展路径、共同病因和相互作用模型。</span></p>
-          <p><b>3 · 多层证据</b><span>依次检查纵向、共情、脑成像、遗传和临床研究。</span></p>
-          <p><b>4 · 综合解释</b><span>把证据放回机制链，讨论因果推断、研究设计和支持方式。</span></p>
-        </div>
-
-        <div class="map-thesis"><span>全文主线</span><p>述情障碍是孤独症人群内部一个重要的情绪加工维度。它与孤独症高频共现，关联焦虑、个人痛苦和部分脑功能差异；行为与遗传研究同时提示，两者的关系包含共同病因和发展互动。</p></div>
+      <section class="embedded-film" aria-labelledby="film-title">
+        <div class="section-kicker">VIDEO EXPLAINER</div>
+        <h2 id="film-title">英文讲解视频</h2>
+        <p>视频沿着网页的同一条证据链展开，保留英文标题、英文配音和双语字幕，并重点解释三类模型与三种因果角色。</p>
+        <video controls preload="metadata" playsinline poster="assets/autism_emotion_processing_v3_cover.png">
+          <source src="assets/autism_emotion_processing_v3.mp4" type="video/mp4">
+          当前浏览器不支持 HTML5 视频播放。
+        </video>
+        <p class="film-note">英文标题与配音保持不变；字幕已内嵌中英双语版本。</p>
       </section>
 
       <section class="article-section" id="concept" data-title="述情障碍是什么">
@@ -137,7 +91,6 @@
         </div>
 
         <div class="citation-box"><span>概念来源</span><p>Ferguson, Preece, &amp; Schweitzer (2023) 综述了述情障碍在孤独症研究中的概念、测量与临床意义。<a href="https://doi.org/10.1080/00050067.2023.2174409" target="_blank" rel="noreferrer">查看原文 ↗</a></p></div>
-        <p class="section-bridge">概念明确之后，下一步是确认测量工具：同一个分数在孤独症与非孤独症人群中是否具有相同含义？</p>
       </section>
 
       <section class="article-section" id="measurement" data-title="怎样测量">
@@ -164,7 +117,6 @@
             <div><h4>怎样理解</h4><p><span class="tag result">研究结果</span>PAQ 为孤独症成人的多维述情障碍评估提供了较好的心理测量依据。</p><p><span class="tag interpretation">研究意义</span>正性与负性情绪、识别与表达困难可以分别进入后续分析。</p><p><span class="tag caution">适用边界</span>样本来自在线自报诊断的成人，且参与者能够独立完成较长问卷；智力障碍和低语言能力人群仍需专门验证。</p></div>
           </div>
         </article>
-        <p class="section-bridge">量表具有可比性之后，组间分数和临界比例才有清晰的解释基础。下一节进入现象规模。</p>
       </section>
 
       <section class="article-section" id="prevalence" data-title="有多常见">
@@ -186,27 +138,24 @@
         </div>
 
         <div class="citation-box"><span>基础元分析</span><p>Kinnaird, Stewart, &amp; Tchanturia (2019), <i>European Psychiatry</i>. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6331035/" target="_blank" rel="noreferrer">开放全文 ↗</a></p></div>
-        <p class="section-bridge">高共现建立了研究问题：孤独症与述情障碍为何经常一起出现？</p>
       </section>
 
-      <section class="article-section" id="cooccur" data-title="为什么共同出现">
-        <div class="section-kicker">04 · WHY CO-OCCUR?</div>
-        <h2>孤独症与述情障碍为什么经常共同出现？</h2>
-        <p>高共现可能来自发展过程、共同病因以及两者的持续互动。现有研究主要围绕三类模型展开，它们关注的层次不同，可以同时贡献解释。</p>
+      <section class="article-section" id="cooccur" data-title="三类模型">
+        <div class="section-kicker">04 · MODELS</div>
+        <h2>三类模型：三条解释路径</h2>
+        <p>高共现本身只能告诉我们两种特质经常同时出现，不能直接说明它们为什么同时出现。研究者因此提出三类模型，分别把重点放在发展经验、共同病因和持续互动上。</p>
 
         <div class="model-stack">
-          <article><span>模型一</span><div><h3>发展路径模型</h3><p>孤独症相关的感觉加工、语言学习或社会互动经验，可能影响情绪概念的形成，进而增加述情障碍。</p></div><div class="mini-path">孤独症相关发展差异 <i>⇢</i> 情绪学习机会 / 语言 <i>⇢</i> 述情障碍</div></article>
-          <article><span>模型二</span><div><h3>共同病因模型</h3><p>孤独症与述情障碍可能共享部分遗传或神经发育基础，同时保留各自独立的影响来源。</p></div><div class="mini-path">共同遗传 / 神经机制 <i>⇢</i> 孤独症 + 述情障碍</div></article>
-          <article><span>模型三</span><div><h3>发展性相互作用模型</h3><p>感觉负荷、内感受、情绪命名、调节策略与社会经验可能形成双向反馈，在发展过程中彼此放大或缓冲。</p></div><div class="mini-path">感觉 / 内感受 <i>↔</i> 情绪概念 <i>↔</i> 调节 <i>↔</i> 社会经验</div></article>
+          <article><span>模型一</span><div><h3>发展路径模型</h3><p>孤独症相关的感觉加工、语言学习或社会互动经验，可能改变一个人获得情绪词汇、观察他人反应和练习情绪表达的机会，久而久之影响情绪概念的形成。</p><div class="model-example"><b>形象例子</b><p>一个孩子经常感到衣服标签、教室噪声或身体不适，却很少能把这些感觉和“紧张”“烦躁”联系起来。若身边的人也只要求他忍耐，而不帮助他给体验命名，身体信号与情绪词汇之间的连接就可能发展得更慢。</p></div></div><div class="mini-path">孤独症相关发展差异 <i>⇢</i> 情绪学习机会 / 语言 <i>⇢</i> 述情障碍</div></article>
+          <article><span>模型二</span><div><h3>共同病因模型</h3><p>孤独症与述情障碍可能共享部分遗传或神经发育基础，同时保留各自独立的影响来源。这个模型不要求其中一个特质必然导致另一个特质。</p><div class="model-example"><b>形象例子</b><p>可以把它想成一棵树的两根枝条：树根代表部分共享的遗传和神经发育倾向，一根枝条长出社会沟通特征，另一根枝条长出识别和描述情绪的困难；两根枝条也会受到各自的环境影响。</p></div></div><div class="mini-path">共同遗传 / 神经机制 <i>⇢</i> 孤独症 + 述情障碍</div></article>
+          <article><span>模型三</span><div><h3>发展性相互作用模型</h3><p>感觉负荷、内感受、情绪命名、调节策略与社会经验可能形成双向反馈，在发展过程中彼此放大或缓冲。这里的关键不是单一原因，而是反馈回路如何逐渐稳定下来。</p><div class="model-example"><b>形象例子</b><p>当一个人无法判断自己是害怕还是过载时，他可能突然离开谈话；他人若把离开理解为“不在乎”，下一次互动就会更紧张，提供情绪练习的机会也会减少。相反，清晰的视觉提示和可预测的沟通可以打断这条回路。</p></div></div><div class="mini-path">感觉 / 内感受 <i>↔</i> 情绪概念 <i>↔</i> 调节 <i>↔</i> 社会经验</div></article>
         </div>
-
-        <p class="section-bridge">三类模型提出不同预测：发展模型需要时间证据，共同病因模型需要遗传证据，相互作用模型需要跨行为与脑机制的关联。下面按证据强度逐层检验。</p>
       </section>
 
       <section class="article-section evidence-section" id="evidence" data-title="证据链">
-        <div class="section-kicker">05 · THE EVIDENCE CHAIN</div>
-        <h2>从时间预测到脑与遗传：证据到底走了多远？</h2>
-        <p class="standfirst">证据链从时间顺序开始，随后进入共情与内感受、脑功能、共同遗传来源和临床心理健康。各层研究回答不同问题：纵向研究观察预测关系，脑成像描述神经实现，双生子模型分解遗传与环境贡献。</p>
+        <div class="section-kicker">05 · EVIDENCE CHAIN</div>
+        <h2>证据链：从纵向预测到脑与遗传</h2>
+        <p class="standfirst">证据链先检验时间顺序，再观察共情与内感受，随后进入脑功能、共同遗传来源和临床心理健康。每一层证据都回答不同的问题：纵向研究检验预测关系，脑成像描述神经实现，双生子模型估计遗传与环境的相对贡献。</p>
 
         <div class="evidence-filter" role="group" aria-label="筛选研究证据">
           <button class="active" data-filter="all">全部</button>
@@ -230,8 +179,6 @@
             </div>
           </article>
 
-          <p class="evidence-transition">纵向研究把 DIF 与 DDF 分开后，下一步问题是：这些维度如何进入具体的社会情绪过程？共情研究提供了一个窗口。</p>
-
           <article class="evidence-card" data-type="behavior">
             <header><span>02 · 共情与内感受</span><h3>述情障碍主要关联共情中的个人痛苦</h3><p>Butera &amp; Harrison, 2023</p></header>
             <div class="evidence-body">
@@ -244,8 +191,6 @@
             </div>
           </article>
 
-          <p class="evidence-transition">个人痛苦把身体感受与他人情绪联系起来。脑成像研究据此把前岛叶作为关键节点，观察它与情绪和社会认知区域的协同。</p>
-
           <article class="evidence-card" data-type="brain">
             <header><span>03 · 任务态功能连接</span><h3>岛叶连接呈现局部相关，整体预测较弱</h3><p>Butera et al., 2023</p></header>
             <div class="evidence-body">
@@ -256,8 +201,6 @@
               <a class="paper-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9898240/" target="_blank" rel="noreferrer">阅读开放全文 ↗</a>
             </div>
           </article>
-
-          <p class="evidence-transition">这项青少年研究给出局部线索。Kirsch 等使用更大的成人样本，同时测量行为成绩和脑活动，用来检验两层结果是否一致。</p>
 
           <article class="evidence-card" data-type="brain">
             <header><span>04 · 行为—脑活动分离</span><h3>行为差异属于孤独症组别，脑活动却受述情障碍调节</h3><p>Kirsch et al., 2025</p></header>
@@ -270,8 +213,6 @@
             </div>
           </article>
 
-          <p class="evidence-transition">行为与脑活动的分离提示，述情障碍与孤独症可能共享部分发展基础，同时沿不同路径影响任务表现。双生子研究进一步检验这种共同来源。</p>
-
           <article class="evidence-card" data-type="genetics">
             <header><span>05 · 双生子遗传</span><h3>共同遗传基础比单向因果更符合数据</h3><p>Yorke et al., 2025</p></header>
             <div class="evidence-body">
@@ -282,8 +223,6 @@
               <a class="paper-link" href="https://doi.org/10.1038/s41398-025-03254-1" target="_blank" rel="noreferrer">阅读开放全文 ↗</a>
             </div>
           </article>
-
-          <p class="evidence-transition">共同遗传来源解释了部分共现。临床研究随后追问：这些特质如何汇聚到焦虑、抑郁和服务需求上？</p>
 
           <article class="evidence-card" data-type="clinical">
             <header><span>06 · 临床服务样本</span><h3>感觉负荷与情绪觉察共同关联心理健康</h3><p>Josyfon et al., 2023</p></header>
@@ -297,7 +236,6 @@
             </div>
           </article>
         </div>
-        <p class="section-bridge">证据链呈现出一条相对稳定的线索：述情障碍与情绪觉察、个人痛苦、部分脑连接和心理健康相关；行为结果受到孤独症组别、述情障碍及其他个体差异的共同影响。</p>
       </section>
 
       <section class="article-section" id="mechanism" data-title="可能的机制">
@@ -317,13 +255,12 @@
         <p>理解他人的情绪会调动自身的身体与情绪表征。内部信号较难解释时，个体可能难以判断对方的具体情绪，也可能产生强烈且难以调节的个人痛苦。共情任务因此需要区分情绪推断、情感共鸣、共情关怀和个人痛苦。</p>
 
         <div class="language-note"><b>概念辨析</b><p>“共情”包含认知推断、情感共鸣、共情关怀和个人痛苦。孤独症与述情障碍对这些成分的关联模式不同，单一总分容易掩盖差异。</p></div>
-        <p class="section-bridge">这条机制链整合了现有结果，但路径的位置决定统计控制的含义。下一节专门处理这一因果推断问题。</p>
       </section>
 
       <section class="article-section" id="causality" data-title="因果推断">
-        <div class="section-kicker">07 · CAUSALITY LAB</div>
-        <h2>控制述情障碍后差异消失，意味着什么？</h2>
-        <p>研究者常把述情障碍分数作为<dfn data-term="covariate">协变量</dfn>加入模型，并观察到孤独症组差异缩小。这个变化的含义取决于述情障碍在研究模型中的位置：它可能是混杂来源、发展机制，也可能与其他自评量表共享测量成分。</p>
+        <div class="section-kicker">07 · CAUSAL REASONING</div>
+        <h2>统计控制之后，差异应该怎样解释？</h2>
+        <p>研究者常把述情障碍分数作为协变量加入模型，并观察到孤独症组差异缩小。这个变化本身没有唯一含义，必须先明确述情障碍在研究模型中的位置：它可能是混杂来源、发展机制，也可能与其他自评量表共享测量成分。</p>
 
         <div class="causal-lab">
           <div class="causal-controls" role="tablist" aria-label="选择述情障碍的因果角色">
@@ -337,53 +274,11 @@
           </div>
         </div>
 
-        <div class="critical-grid">
-          <article><span>连续变量被切分</span><p>用 TAS 临界值把人分成“有 / 无述情障碍”会损失信息、降低统计功效，还可能制造人为边界。</p></article>
-          <article><span>横断面中介</span><p>同一时间点的统计间接效应呈现变量关系，时间顺序需要纵向或干预证据确认。</p></article>
-          <article><span>小样本 fMRI</span><p>脑—行为相关常比预期更小；小样本容易产生不稳定的大效应或无法解释的零结果。</p></article>
-          <article><span>共同方法方差</span><p>孤独症特质、述情障碍和焦虑由同一人同一时间自评时，回答风格可能增加变量间相关。</p></article>
-        </div>
-        <p class="section-bridge">因此，“控制述情障碍”需要服务于明确的研究问题：估计总效应、直接效应，还是区分量表的共享成分。统计显著性的变化本身只是结果的一部分。</p>
-      </section>
-
-      <section class="article-section" id="verdict" data-title="证据裁决">
-        <div class="section-kicker">08 · EVIDENCE SUMMARY</div>
-        <h2>当前证据形成了怎样的结论？</h2>
-        <div class="verdict-table">
-          <div class="verdict-head"><span>命题</span><span>判断</span><span>主要依据</span></div>
-          <div><b>孤独症与述情障碍可区分</b><span class="level high">较强支持</span><p>孤独症人群内部的述情障碍分布很广；PAQ 因子结构可比；两者各有独立变异。</p></div>
-          <div><b>述情障碍在孤独症中高频共现</b><span class="level high">较强支持</span><p>元分析临界比例约 50% vs 5%，组间总分差异大。</p></div>
-          <div><b>述情障碍预测社交与焦虑差异</b><span class="level medium">中等支持</span><p>DDF 与后续自评社交困难、DIF 与后续焦虑出现维度特异性纵向关联。</p></div>
-          <div><b>述情障碍解释共情差异</b><span class="level medium">部分支持</span><p>关联主要集中在个人痛苦和部分共情关怀指标。</p></div>
-          <div><b>述情障碍解释脑功能差异</b><span class="level mixed">混合证据</span><p>部分岛叶连接和社会脑活动受调节，但整体预测结果和行为表现不一致。</p></div>
-          <div><b>述情障碍单向导致情绪困难</b><span class="level low">证据有限</span><p>现有研究多为相关设计，纵向波次有限；共同遗传与双向发展路径同样符合数据。</p></div>
-        </div>
-        <p class="section-bridge">总体而言，述情障碍解释了孤独症人群内部的一部分情绪加工异质性。它的作用在情绪觉察、个人痛苦和部分脑功能指标上更清晰，在面部情绪识别行为上更依赖任务与样本。</p>
-      </section>
-
-      <section class="article-section" id="practice" data-title="研究与实践">
-        <div class="section-kicker">09 · IMPLICATIONS</div>
-        <h2>区分孤独症与述情障碍，有什么实际意义？</h2>
-        <div class="implication-columns">
-          <article><span>对研究</span><h3>准确描述个体差异</h3><ul><li>分别测量 DIF、DDF 与 EOT，保留连续分数。</li><li>根据因果问题，将述情障碍作为预测变量、调节变量或发展机制建模。</li><li>结合自评、他评、访谈、行为、生理和自然情境数据。</li><li>预注册主要假设，扩大脑成像样本，完整报告支持与未支持的结果。</li><li>提高女性、不同文化、智力障碍者与低语言能力者的代表性。</li></ul></article>
-          <article><span>对临床与支持</span><h3>定位具体困难环节</h3><ul><li>评估困难发生在身体觉察、情绪区分、语言表达还是调节阶段。</li><li>心理治疗可加入视觉辅助、情绪词表、具体情境与身体线索。</li><li>同时评估感觉负荷、环境不确定性和情绪命名能力。</li><li>区分个人痛苦与共情关怀，理解强烈不适背后的加工过程。</li><li>根据个体功能需求选择支持内容与沟通方式。</li></ul></article>
-        </div>
-        <div class="ethics-callout"><span>实践原则</span><p>量表分数用于识别功能需求：困难出现在哪个环节，哪些环境会加重困难，哪种支持方式更有效。</p></div>
-
-        <h3 class="subheading">接下来最需要的研究</h3>
-        <div class="future-list">
-          <article><b>01</b><div><h3>至少三波的纵向研究</h3><p>两波数据很难区分稳定个体差异、双向预测和共同原因。三波以上可以更好地比较发展模型。</p></div></article>
-          <article><b>02</b><div><h3>可检验的因果图</h3><p>研究前明确述情障碍是混杂、中介、调节还是结果，再决定控制、分层或检验交互。</p></div></article>
-          <article><b>03</b><div><h3>超越自评的测量体系</h3><p>结合情绪访谈、经验采样、身体信号任务、生理指标与亲近他人报告，并检验各指标究竟测到什么。</p></div></article>
-          <article><b>04</b><div><h3>真实社会互动</h3><p>现实共情发生在动态对话、双人互动和持续关系中，需要相应的自然情境指标。</p></div></article>
-          <article><b>05</b><div><h3>更有代表性的样本</h3><p>目前许多结论来自能独立完成问卷、IQ 较高、语言流利的成人或青少年，外推边界必须被正视。</p></div></article>
-          <article><b>06</b><div><h3>机制导向的干预试验</h3><p>同时检验干预效果和作用机制：DIF、DDF、感觉不确定性或调节能力中的哪些变化带来生活质量改善。</p></div></article>
-        </div>
-        <p class="section-bridge">这些研究将把“述情障碍是否重要”推进到更具体的问题：它在何时、通过哪条路径、对哪些人产生影响。</p>
+        <div class="causal-boundary"><strong>先问清楚研究问题，再决定是否控制。</strong><span>连续特质不宜随意切成“有 / 无”；横断面中介不能提供时间顺序；同一报告者的自评还需要警惕共同方法方差。</span></div>
       </section>
 
       <section class="article-section references" id="references" data-title="参考文献">
-        <div class="section-kicker">10 · REFERENCES</div>
+        <div class="section-kicker">08 · REFERENCES</div>
         <h2>核心参考文献</h2>
         <ol>
           <li>Brett, J. D., Jarvers, I., Uljarevic, M., Whitehouse, A., Gross, J. J., Samson, A. C., &amp; Preece, D. A. (2025). Characterizing the nature of alexithymia in autistic adults: Validation of the Perth Alexithymia Questionnaire. <i>Autism in Adulthood</i>. <a href="https://doi.org/10.1177/25739581251371420">https://doi.org/10.1177/25739581251371420</a></li>
@@ -402,22 +297,6 @@
       <footer class="article-footer"><p>孤独症 × 述情障碍 · 深度科普专题</p><a href="#top">回到顶部 ↑</a></footer>
     </main>
   </div>
-
-  <aside class="glossary" id="glossary" aria-hidden="true">
-    <div class="glossary-head"><div><span>GLOSSARY</span><h2>术语表</h2></div><button id="glossaryClose" aria-label="关闭术语表">×</button></div>
-    <dl>
-      <dt>述情障碍 Alexithymia</dt><dd>难以识别、描述或关注自身情绪的连续特质；DSM 未将其列为独立诊断。</dd>
-      <dt>DIF</dt><dd>Difficulty Identifying Feelings，难以识别和区分自己的情绪。</dd>
-      <dt>DDF</dt><dd>Difficulty Describing Feelings，难以把情绪组织成语言并传达。</dd>
-      <dt>EOT</dt><dd>Externally Oriented Thinking，注意较少指向内在情绪体验。</dd>
-      <dt>内感受 Interoception</dt><dd>感知与解释心跳、呼吸、胃部感觉等身体内部信号的过程。</dd>
-      <dt>测量等值</dt><dd>检验同一量表是否在不同群体中测量相同构念，分数单位是否可比。</dd>
-      <dt>中介</dt><dd>描述某变量可能位于两个变量的关联路径之间；因果顺序通常需要纵向或干预数据确认。</dd>
-      <dt>调节</dt><dd>一个变量改变另一关联的方向或强度，例如述情障碍是否改变孤独症与脑活动的关系。</dd>
-      <dt>功能连接</dt><dd>不同脑区活动时间序列之间的统计协同，不等同于直接解剖连接或单向信息传递。</dd>
-      <dt>遗传相关</dt><dd>两个特质受重叠遗传影响的程度，用于描述共享遗传来源。</dd>
-    </dl>
-  </aside>
 
   <button class="back-top" id="backTop" type="button" aria-label="回到顶部">↑</button>
   <script src="script.js"></script>
